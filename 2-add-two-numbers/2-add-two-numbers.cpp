@@ -26,9 +26,7 @@ public:
                 havetofree[0] = l1;
                 l1->next = new ListNode();
                 l1->next->next = l1->next;
-                
                 check1 = false;
-                
             }
             if(l2->next == nullptr){
                 havetofree[1] = l2;
