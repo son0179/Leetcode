@@ -19,7 +19,7 @@ public:
         while(check1 || check2)
         {
             carry->next = new ListNode();
-            auto value = l1->val + l2->val + carry->val;
+            int value = l1->val + l2->val + carry->val;
             carry->val = value%10;
             carry->next->val = value/10;
             if(l1 -> next == nullptr){
@@ -39,7 +39,7 @@ public:
             l2 = l2->next;
             l1 = l1->next;
         }
-        for(vector<ListNode*>::size_type i = 0; i < havetofree.size(); i++){
+        for(int i = 0; i < 3; i++){
             if(havetofree[i]->next->val == 0){
                 delete(havetofree[i]->next);
                 havetofree[i]->next = nullptr;
