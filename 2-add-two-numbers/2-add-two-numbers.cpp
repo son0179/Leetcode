@@ -41,10 +41,10 @@ public:
             l2 = l2->next;
             l1 = l1->next;
         }
-        for(auto node : havetofree){
-            if(node->next->val == 0){
-                delete(node->next);
-                node->next = nullptr;
+        for(vector<ListNode*>::size_type i = 0; i < havetofree.size(); i++){
+            if(havetofree[i]->next->val == 0){
+                delete(havetofree[i]->next);
+                havetofree[i]->next = nullptr;
             }
         }
         
