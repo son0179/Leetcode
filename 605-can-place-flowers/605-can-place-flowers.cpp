@@ -10,7 +10,7 @@ public:
             else frontcheck=false;
             
             
-            if(i == flowerbed.size()-1) backcheck=true;
+            if(i == flowerbed.size()-1) backcheck=true; // index range is 1 smaller than container size :(
             else if(flowerbed[i+1] == 0) backcheck=true;
             else backcheck=false;
             
@@ -19,7 +19,7 @@ public:
                 n--;
             }
             
-            if(n<=0) return true;
+            if(n<=0) return true; // if(n==0) >> if(n<=0)  : Problem occurs when func's argument n == 0
         }
         return false;
     }
