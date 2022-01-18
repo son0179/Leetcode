@@ -18,6 +18,7 @@ public:
             if (!(flowerbed[i-1] || flowerbed[i] || flowerbed[i+1])) {
                 n--;
                 flowerbed[i]=1;
+                i+=1;
                 if (n <= 0) return true;
             }
         }
