@@ -11,15 +11,15 @@ public:
     ListNode *detectCycle(ListNode *head) {
         if(head == nullptr) 
             return nullptr;
-        vector<ListNode*> visited;
+        map<ListNode*,bool> visited;
         ListNode* curnode = head;
         while(curnode->next != nullptr)
         {
-            auto target = find(visited.begin(),visited.end(),curnode) ;
-            if( target!= visited.end()){
-                return *target;
+            auto target = visited.find(curnode);
+            if( ( target ) != visited.end()){
+                return curnode;
             }
-            visited.push_back(curnode);
+            visited[curnode] = true;
             curnode = curnode -> next;
         }
         return nullptr;
