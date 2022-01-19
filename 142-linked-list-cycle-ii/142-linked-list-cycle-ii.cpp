@@ -11,6 +11,7 @@ public:
     ListNode *detectCycle(ListNode *head) {
         if(head == nullptr) 
             return nullptr;
+        // using map
         map<ListNode*,bool> visited;
         ListNode* curnode = head;
         while(curnode->next != nullptr)
